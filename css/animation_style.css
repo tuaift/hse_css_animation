@@ -1,0 +1,192 @@
+.animation {
+  display: flex;
+  justify-content: center;
+  width: 50vw;
+  height: 50vh;
+  position: absolute;
+}
+
+.ani1-arrows {
+  display: flex;
+  position: absolute;
+  align-self: flex-start;
+  justify-content: space-between;
+  width: 376px;
+  height: 491px;
+  z-index: 2;
+}
+
+.red-arrow {
+  display: block;
+  width: 8px;
+  height: auto;
+  top: -27px;
+  background: url('../img/red_arrow_491.svg') no-repeat;
+  position: relative;
+}
+
+.arrow1 {
+  animation: arrow-down 3.3s linear;
+}
+
+.arrow2 {
+  animation: arrow-down 6.5s linear;
+}
+
+.arrow3 {
+  /* animation: arrow-down 8.5s linear; */
+  animation: arrow-down 9s linear;
+}
+
+.ani1-ellipses {
+  width: 500px;
+  height: 44px;
+  display: inline-block;
+  position: absolute;
+  align-self: flex-end;
+  bottom: 20px;
+  z-index: 1;
+}
+
+.ellipse-s {
+  width: 500px;
+  height: 44px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('../img/ellipses.svg');
+  background-position: -500px top;
+  animation: s-stroke 10s steps(1) infinite;
+}
+
+.ellipse-m {
+  width: 500px;
+  height: 44px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('../img/ellipses.svg');
+  background-position: -1500px top;
+  animation: m-stroke 10s steps(1) infinite;
+}
+
+.ellipse-l {
+  width: 500px;
+  height: 44px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('../img/ellipses.svg');
+  background-position: -3000px top;
+  animation: l-stroke 10s steps(1) infinite;
+}
+
+/* .ani1-red-ellipse {
+  width: 500px;
+  height: 44px;
+  display: block;
+  position: absolute;
+  background: red;
+  border-radius: 50%;
+  align-self: flex-end;
+  bottom: 20px;
+  z-index: 0;
+} */
+
+.ani1-red-ellipse-wrapper {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  position: absolute;
+  width: 518px;
+  height: 44px;
+  padding: 10px;
+  align-self: flex-end;
+  bottom: 19px;
+  overflow: hidden;
+  z-index: 1;
+  /* filter: blur(2px); */
+  /* resize: horizontal; */
+  animation: red-area-resize 10s linear infinite;
+}
+
+.ani1-red-ellipse {
+  width: 100%;
+  align-self: center;
+  padding-bottom: 8.5%;
+  background: red;
+  border-radius: 50%;
+  opacity: 1;
+  box-shadow: 0 0 5px 3px rgba(255, 0, 0, 1);
+  /* animation: test 5s linear infinite; */
+  animation: opacity-pulsing 10s linear infinite;
+}
+
+@keyframes red-area-resize {
+  0% {width: 0;}
+  33% {width: 192px;}
+  66% {width: 383px;}
+  99%, 100% {width: 518px;}
+}
+
+/* @keyframes red-area-resize {
+  0% {width: 0;}
+  33% {width: 192px;}
+  66% {width: 383px;}
+  85%, 100% {width: 518px;}
+} */
+
+@keyframes test {
+  0% {background: white;}
+  33% {background: white;}
+  34% {background: red;}
+  65% {background: red;}
+  66%, 100% {background: gold;}
+}
+
+@keyframes s-stroke {
+  0% {background-position: -500px top;}
+  33%, 100% {background-position: 0 top;}
+}
+
+@keyframes m-stroke {
+  0% {background-position: -2500px top;}
+  33% {background-position: -2000px top;}
+  66%, 100% {background-position: -1500px top;}
+}
+
+@keyframes l-stroke {
+  0% {background-position: -3000px top;}
+  33% {background-position: -4000px top;}
+  66% {background-position: -3500px top;}
+  100% {background-position: -3000px top;}
+}
+
+@keyframes opacity-pulsing {
+  8% {box-shadow: 0 0 5px 3px rgba(255, 0, 0, 1); opacity: .9;}
+  30% {box-shadow: 0 0 5px 3px rgba(255, 0, 0, 1); opacity: .5;}
+  35% {box-shadow: 0 0 5px 8px rgba(255, 0, 0, 1); opacity: .6;}
+  52%, 65% {box-shadow: 0 0 5px 3px rgba(255, 0, 0, 1); opacity: .4;}
+  68% {box-shadow: 0 0 5px 8px rgba(255, 0, 0, 1); opacity: .6;}
+  83%, 100% {box-shadow: 0 0 5px 3px rgba(255, 0, 0, 1); opacity: .4;}
+}
+
+/* @keyframes opacity-pulsing {
+  8% {box-shadow: 0 0 5px 3px rgba(255, 0, 0, 1); opacity: .9;}
+  30% {box-shadow: 0 0 5px 3px rgba(255, 0, 0, 1); opacity: .5;}
+  35% {box-shadow: 0 0 5px 8px rgba(255, 0, 0, 1); opacity: .6;}
+  52%, 65% {box-shadow: 0 0 5px 3px rgba(255, 0, 0, 1); opacity: .4;}
+  68% {box-shadow: 0 0 5px 8px rgba(255, 0, 0, 1); opacity: .6;}
+  78%, 86% {box-shadow: 0 0 5px 3px rgba(255, 0, 0, 1); opacity: .4;}
+  88% {box-shadow: 0 0 5px 3px rgba(255, 0, 0, 1); opacity: .7;}
+  98% {box-shadow: 0 0 5px 6px rgba(255, 0, 0, 1); opacity: .4;}
+  100% {box-shadow: 0 0 5px 3px rgba(255, 0, 0, 1); opacity: .5;}
+} */
+
+@keyframes arrow-down {
+  0% {top: -491px;}
+  100% {top: -27px;}
+}

@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+body, ul {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Code'
+}
+
+.field {
+  /* display: flex; */
+  width: 50vw;
+  height: 50vh;
+  float: left;
+  background: url("img/field.png") no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  /* overflow: hidden; */
+  position: relative;
+}
+
+.field:nth-child(2n) {
+  border-right: none;
+}
+
+.ruler-right {
+  content: '';
+  display: none;
+  position: absolute;
+  z-index: 1;
+  margin-top: 2px;
+  left: calc(100% + 2px);
+}
+
+.ruler-left {
+  content: '';
+  display: none;
+  position: absolute;
+  z-index: 1;
+  margin-top: 2px;
+  right: calc(100% + 2px);
+}
+
+.ruler-bottom {
+  content: '';
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: calc(100% + 2px);
+  left: 96px;
+}
+
+/* .ruler-bottom-right {
+  content: '';
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: calc(100% + 2px);
+  left: 96px;
+} */
+
+.ruler-top {
+  content: '';
+  display: none;
+  position: absolute;
+  z-index: 1;
+  bottom: calc(100% - 4px);
+  left: 95px;
+}
+
+.ruler-top-right {
+  content: '';
+  display: none;
+  position: absolute;
+  z-index: 1;
+  bottom: calc(100% - 4px);
+  right: 100px;
+}
+
+.info:hover ~ .description,
+.info:hover ~ .ruler-right,
+.info:hover ~ .ruler-left,
+.info:hover ~ .ruler-bottom,
+.info:hover ~ .ruler-bottom-right,
+.info:hover ~ .ruler-top,
+.info:hover ~ .ruler-top-right {
+  display: block;
+}
+
+/* .right-side-elem {
+  display: block;
+  float: right;
+  margin: 0 0 20px 20px;
+}*/
+
+.label {
+  display: inline-block;
+  font-family: 'Roboto';
+  position: relative;
+  font-size: 20px;
+  /* font-size: 30px; */
+  margin: 19px 20px;
+}
+
+.info {
+  display: block;
+  position: absolute;
+  /* margin: 22px 20px; */
+  right: 20px;
+  top: 21px;
+  /* font-size: 28px; */
+  /* float: right; */
+}
+
+.description {
+  position: absolute;
+  max-width: 220px;
+  right: 19px;
+  display: none;
+  /* margin: 20px; */
+  /* float: right; */
+
+}
+
+.description p {
+  font-size: 11px;
+  line-height: 13px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
