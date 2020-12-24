@@ -2,8 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cumulus lab project</title>
     <link rel="stylesheet" href="css/animation_style.css">
+    <link rel="stylesheet" href="css/responsive_layout.css">
     <style media="screen">
       * {
         box-sizing: border-box;
@@ -18,18 +20,23 @@
         font-family: 'Fira Code'
       }
 
+      .canvas {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
       .field {
         display: flex;
         width: 50vw;
         height: 50vh;
-        float: left;
+        /* float: left; */
         background: url("img/field.png") no-repeat;
         background-size: cover;
         background-position: bottom;
         border-right: 2px solid black;
         border-bottom: 2px solid black;
         /* overflow: hidden; */
-        position: relative;
       }
 
       .field:nth-child(2n) {
@@ -38,6 +45,8 @@
 
       .static {
         z-index: 2;
+        width: inherit;
+        position: relative;
       }
 
       .animation {
@@ -45,59 +54,17 @@
         align-self: flex-start;
       }
 
-      .ruler-right {
-        content: '';
-        display: none;
-        position: absolute;
-        z-index: 1;
-        margin-top: 2px;
-        left: calc(100% + 2px);
-      }
-
-      .ruler-left {
-        content: '';
-        display: none;
-        position: absolute;
-        z-index: 1;
-        margin-top: 2px;
-        right: calc(100% + 2px);
-      }
-
-      .ruler-bottom {
-        content: '';
-        display: none;
-        position: absolute;
-        z-index: 1;
-        top: calc(100% + 2px);
-        left: 96px;
-      }
-
-      .ruler-top {
-        content: '';
-        display: none;
-        position: absolute;
-        z-index: 1;
-        bottom: calc(100% - 4px);
-        left: 95px;
-      }
-
-      .ruler-top-right {
-        content: '';
-        display: none;
-        position: absolute;
-        z-index: 1;
-        bottom: calc(100% - 4px);
-        right: 100px;
-      }
-
-      .info:hover ~ .description,
-      .info:hover ~ .ruler-right,
-      .info:hover ~ .ruler-left,
-      .info:hover ~ .ruler-bottom,
-      .info:hover ~ .ruler-bottom-right,
-      .info:hover ~ .ruler-top,
-      .info:hover ~ .ruler-top-right {
+      .info:hover ~ .description {
         display: block;
+      }
+
+      .info:hover ~ .title {
+        display: inline-block;
+      }
+
+      .info:hover ~ .ruler-container-v,
+      .info:hover ~ .ruler-container-h {
+        display: flex;
       }
 
       /* .right-side-elem {
@@ -110,138 +77,269 @@
         display: inline-block;
         font-family: 'Roboto';
         position: relative;
-        font-size: 20px;
+        font-size: calc(11px + 0.6vw);
         /* font-size: 30px; */
-        margin: 19px 20px;
+        margin: 2vh 0 0 1.2vw;
+      }
+
+      .title {
+        position: relative;
+        display: none;
+      }
+
+      .title p {
+        font-size: calc(10px + 0.3vw);
+        margin-left: 0.5vw;
       }
 
       .info {
         display: block;
         position: absolute;
-        right: 20px;
-        top: 21px;
+        min-width: 3%;
+        height: auto;
+        right: calc(1.2vw + 1px);
+        top: calc(2vh + 1px);
       }
 
       .description {
         position: absolute;
         max-width: 220px;
-        right: 19px;
+        right: 1.2vw;
+        top: 6.7vh;
         display: none;
       }
 
       .description p {
-        font-size: 11px;
-        line-height: 13px;
+        font-size: calc(6px + 0.3vw);
+        line-height: 14px;
         margin-block-start: 0px;
         margin-block-end: 0px;
       }
 
-      /* .animation {
-        display: flex;
-        justify-content: center;
-        width: 50vw;
-        height: 50vh;
-        background: rgba(255, 0, 0, 0.5);
+      /* Rulers style */
+
+      .ruler-svg img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .ruler-container-v {
+        display: none;
         position: absolute;
-        z-index: 0;
+        /* width: 46px; */
+        width: 7%;
+        height: 50vh;
+        top: 0;
+        align-items: center;
       }
 
-      .container {
-        display: block;
-        width: 35vw;
-        height: 5vh;
+      .ruler-container-v-right {
+        left: 100%;
       }
 
-      .circle {
-        display: block;
-        width: 35vw;
-        height: 5vh;
-        background: yellow;
-        border: 1px solid black;
-        border-radius: 50%;
-        transform: perspective(1000px);
+      .ruler-container-v-left {
+        left: -5.3%;
+      }
+
+      .ruler-wrapper-v {
+        width: 75%;
+        height: auto;
+      }
+
+      .ruler-container-h {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        width: 50vw;
+        height: 7%;
+        align-items: center;
+      }
+
+      .ruler-container-h-bottom {
+        top: 100%;
+      }
+
+      .ruler-container-h-top {
+        bottom: calc(100% + 2px);
+      }
+
+      .ruler-wrapper-h {
+        width: 75%;
+        height: auto;
+      }
+
+      @media all and (max-width: 1024px) {
+        .info {display: none;}
+        .description {display: block; top: 2vh; max-width: 180px;}
+        .description p {line-height: 11px;}
+        .title {display: inline-block; margin-left: 0;}
+        .title p {font-size: 12px;}
+        .label {margin-top: 1.4vh;}
+      }
+
+      @media all and (max-width: 1024px) and (orientation: portrait) {
+        .canvas {flex-direction: column;}
+        .field {width: 100vw; height: 50vh;}
+        .animation {width: 100vw;}
+        .title p {font-size: 12px;}
+        .description {max-width: 210px; top: 1.6vh;}
+        .description p {font-size: 10px; line-height: 13px}
+      }
+
+      @media all and (max-width: 375px) and (orientation: portrait) {
+        .field {width: 100vw; height: 100vh;}
+        .label {font-size: 20px; margin-left: 3.5vw;}
+        .title p {font-size: 16px;}
+        .description {left: 4vw;  margin-top: 40px; max-width: 240px;}
+        .description p {font-size: 12px; line-height: 15px;}
+        /* .animation {height: 100vh;} */
+      }
+
+      /* @media only screen and (max-width: 375px;) and (orientation: portrait) {
+        .canvas {flex-direction: column;}
+        .field {width: 100vw; height: 100vh;}
+        .animation {height: 100vh;}
+        .label {font-size: 18px; margin-left: 3vw;}
+        .description {left: 3.5vw; top: 7vh;}
+        .description p {font-size: 9px;}
       } */
 
 
     </style>
   </head>
   <body>
-    <section class="field field-a">
-      <div class="static">
-        <span class="label">(a)</span>
-        <img class="info" src="img/info_icon.svg" alt="">
-        <div class="description">
-          <p>Короткий текст c описанием того, что происходит на картинке</p>
+    <section class="canvas">
+      <section class="field field-a">
+        <div class="static">
+          <span class="label">(a)</span>
+          <img class="info" src="img/info_icon.svg" alt="">
+          <div class="title">
+            <p>Surface heating</p>
+          </div>
+          <div class="description">
+            <p>When the temperature drops below the dew-point temperature, the net condensation takes place and the cloud forms</p>
+          </div>
+          <div class="ruler-container-v ruler-container-v-right">
+            <div class="ruler-wrapper-v">
+              <div class="ruler-svg">
+                <img style="margin-top: 2vh;" src="img/ruler_right.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="ruler-container-h ruler-container-h-bottom">
+            <div class="ruler-wrapper-h">
+              <div class="ruler-svg">
+                <img src="img/ruler_bottom.svg" alt="">
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="ruler-right">
-          <img src="img/ruler_right.svg" alt="">
+        <div class="animation ani1">
+          <div class="ani-wrapper">
+            <div class="ani1-arrows">
+              <span class="red-arrow arrow3"></span>
+              <span class="red-arrow arrow2"></span>
+              <span class="red-arrow arrow1"></span>
+              <span class="red-arrow arrow2"></span>
+              <span class="red-arrow arrow3"></span>
+            </div>
+            <div class="ani1-ellipses-container">
+              <div class="ani1-ellipses">
+                <div class="ellipse-s"></div>
+                <div class="ellipse-m"></div>
+                <div class="ellipse-l"></div>
+              </div>
+            </div>
+            <!-- <div class="ani1-ellipses">
+              <div class="ellipse-s"></div>
+              <div class="ellipse-m"></div>
+              <div class="ellipse-l"></div>
+            </div> -->
+            <div class="ani1-red-ellipse-wrapper">
+              <div class="ani1-red-ellipse"></div>
+            </div>
+          </div>
         </div>
-        <div class="ruler-bottom">
-          <img src="img/ruler_bottom.svg" alt="">
+      </section>
+      <section class="field field-b">
+        <div class="static">
+          <span class="label">(b)</span>
+          <img class="info" src="img/info_icon.svg" alt="">
+          <div class="title">
+            <p>Evaporation</p>
+          </div>
+          <div class="description">
+            <p>When the temperature drops below the dew-point temperature, the net condensation takes place and the cloud forms</p>
+          </div>
+          <div class="ruler-container-v ruler-container-v-left">
+            <div class="ruler-wrapper-v">
+              <div class="ruler-svg">
+                <img style="margin-top: 2vh;" src="img/ruler_left.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="ruler-container-h ruler-container-h-bottom">
+            <div class="ruler-wrapper-h">
+              <div class="ruler-svg">
+                <img src="img/ruler_bottom_right.svg" alt="">
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="animation ani1">
-        <div class="ani1-arrows">
-          <span class="red-arrow arrow3"></span>
-          <span class="red-arrow arrow2"></span>
-          <span class="red-arrow arrow1"></span>
-          <span class="red-arrow arrow2"></span>
-          <span class="red-arrow arrow3"></span>
+      </section>
+      <section class="field field-c">
+        <div class="static">
+          <span class="label">(c)</span>
+          <img class="info" src="img/info_icon.svg" alt="">
+          <div class="title">
+            <p>Cloud droplet formation</p>
+          </div>
+          <div class="description">
+            <p>When the temperature drops below the dew-point temperature, the net condensation takes place and the cloud forms</p>
+          </div>
+          <div class="ruler-container-v ruler-container-v-right">
+            <div class="ruler-wrapper-v">
+              <div class="ruler-svg">
+                <img style="margin-top: 2vh;" src="img/ruler_right.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="ruler-container-h ruler-container-h-top">
+            <div class="ruler-wrapper-h">
+              <div class="ruler-svg">
+                <img src="img/ruler_top.svg" alt="">
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="ani1-ellipses">
-          <div class="ellipse-s"></div>
-          <div class="ellipse-m"></div>
-          <div class="ellipse-l"></div>
+      </section>
+      <section class="field field-d">
+        <div class="static">
+          <span class="label">(d)</span>
+          <img class="info" src="img/info_icon.svg" alt="">
+          <div class="title">
+            <p>Cloud formation</p>
+          </div>
+          <div class="description">
+            <p>Net evaporation occurs when the rate of evaporation exceeds the rate of condensation. A state of saturation exists when these two process rates are equal</p>
+          </div>
+          <div class="ruler-container-v ruler-container-v-left">
+            <div class="ruler-wrapper-v">
+              <div class="ruler-svg">
+                <img style="margin-top: 2vh;" src="img/ruler_left.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="ruler-container-h ruler-container-h-top">
+            <div class="ruler-wrapper-h">
+              <div class="ruler-svg">
+                <img src="img/ruler_top_right.svg" alt="">
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="ani1-red-ellipse-wrapper">
-          <div class="ani1-red-ellipse"></div>
-        </div>
-      </div>
-    </section>
-    <section class="field field-b">
-      <div class="static">
-        <span class="label">(b)</span>
-        <img class="info" src="img/info_icon.svg" alt="">
-        <div class="description">
-          <p>When the temperature drops below the dew-point temperature, the net condensation takes place and the cloud forms</p>
-        </div>
-        <div class="ruler-left">
-          <img src="img/ruler_left.svg" alt="">
-        </div>
-        <div class="ruler-bottom">
-          <img src="img/ruler_bottom_right.svg" alt="">
-        </div>
-      </div>
-    </section>
-    <section class="field field-c">
-      <div class="static">
-        <span class="label">(c)</span>
-        <img class="info" src="img/info_icon.svg" alt="">
-        <div class="description">
-          <p>When the temperature drops below the dew-point temperature, the net condensation takes place and the cloud forms</p>
-        </div>
-        <div class="ruler-right">
-          <img src="img/ruler_right.svg" alt="">
-        </div>
-        <div class="ruler-top">
-          <img src="img/ruler_top.svg" alt="">
-        </div>
-      </div>
-    </section>
-    <section class="field field-d">
-      <div class="static">
-        <span class="label">(d)</span>
-        <img class="info" src="img/info_icon.svg" alt="">
-        <div class="description">
-          <p>Net evaporation occurs when the rate of evaporation exceeds the rate of condensation. A state of saturation exists when these two process rates are equal</p>
-        </div>
-        <div class="ruler-left">
-          <img src="img/ruler_left.svg" alt="">
-        </div>
-        <div class="ruler-top-right">
-          <img src="img/ruler_top_right.svg" alt="">
-        </div>
-      </div>
+      </section>
     </section>
   </body>
 </html>

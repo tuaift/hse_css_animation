@@ -134,3 +134,29 @@ body, ul {
   margin-block-start: 0px;
   margin-block-end: 0px;
 }
+
+/* .animation {
+  display: flex;
+  justify-content: center;
+  width: 50vw;
+  height: 50vh;
+  background: rgba(255, 0, 0, 0.5);
+  position: absolute;
+  z-index: 0;
+}
+
+.container {
+  display: block;
+  width: 35vw;
+  height: 5vh;
+}
+
+.circle {
+  display: block;
+  width: 35vw;
+  height: 5vh;
+  background: yellow;
+  border: 1px solid black;
+  border-radius: 50%;
+  transform: perspective(1000px);
+} */
