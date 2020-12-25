@@ -34,15 +34,18 @@
 }
 
 .ani1-arrow1 {
-  animation: arrow1-down 10s linear infinite;
+  -webkit-animation: arrow1-down 10s linear infinite;
+          animation: arrow1-down 10s linear infinite;
 }
 
 .ani1-arrow2 {
-  animation: arrow2-down 10s linear infinite;
+  -webkit-animation: arrow2-down 10s linear infinite;
+          animation: arrow2-down 10s linear infinite;
 }
 
 .ani1-arrow3 {
-  animation: arrow3-down 10s linear infinite;
+  -webkit-animation: arrow3-down 10s linear infinite;
+          animation: arrow3-down 10s linear infinite;
 }
 
 .ani2-arrows {
@@ -54,7 +57,8 @@
   height: 340px;
   z-index: 1;
   bottom: 40px;
-  animation: ani2-arrow-height 10s linear infinite;
+  -webkit-animation: ani2-arrow-height 10s linear infinite;
+          animation: ani2-arrow-height 10s linear infinite;
 }
 
 .ani2-arrow {
@@ -108,7 +112,8 @@
   transform: scale(.9);
   z-index: 1;
   bottom: 40px;
-  animation: cyl-rise 10s steps(1) infinite;
+  -webkit-animation: cyl-rise 10s steps(1) infinite;
+          animation: cyl-rise 10s steps(1) infinite;
 }
 
 .ani2-cyl-elem {
@@ -139,7 +144,8 @@
   background-position: -500px top;
   position: absolute;
   transform: scale(.98);
-  animation: s-stroke 10s steps(1) infinite;
+  -webkit-animation: s-stroke 10s steps(1) infinite;
+          animation: s-stroke 10s steps(1) infinite;
 }
 
 .ellipse-m {
@@ -150,7 +156,8 @@
   background-position: -1500px top;
   position: absolute;
   transform: scale(.98);
-  animation: m-stroke 10s steps(1) infinite;
+  -webkit-animation: m-stroke 10s steps(1) infinite;
+          animation: m-stroke 10s steps(1) infinite;
 }
 
 .ellipse-l {
@@ -162,7 +169,8 @@
   transform: scale(.98);
   background-position: -3000px top;
   position: absolute;
-  animation: l-stroke 10s steps(1) infinite;
+  -webkit-animation: l-stroke 10s steps(1) infinite;
+          animation: l-stroke 10s steps(1) infinite;
 }
 
 .ani1-red-ellipse-wrapper {
@@ -178,7 +186,8 @@
   bottom: 9px;
   overflow: hidden;
   z-index: 1;
-  animation: red-area-resize 10s linear infinite;
+  -webkit-animation: red-area-resize 10s linear infinite;
+          animation: red-area-resize 10s linear infinite;
 }
 
 .ani1-red-ellipse {
@@ -190,7 +199,8 @@
   opacity: 1;
   box-shadow: 0 0 5px 3px rgba(255, 0, 0, 1);
   /* animation: test 5s linear infinite; */
-  animation: opacity-pulsing 10s linear infinite;
+  -webkit-animation: opacity-pulsing 10s linear infinite;
+          animation: opacity-pulsing 10s linear infinite;
 }
 
 .ani2-red-ellipse-wrapper {
@@ -213,7 +223,8 @@
   border-radius: 50%;
   opacity: .5;
   box-shadow: 0 0 5px 1px rgba(255, 0, 0, 1); opacity: .5;
-  animation: ani2_red_pulsation 2s alternate linear infinite;
+  -webkit-animation: ani2_red_pulsation 2s alternate linear infinite;
+          animation: ani2_red_pulsation 2s alternate linear infinite;
 }
 
 .ani2-drops-container {
@@ -225,7 +236,8 @@
   bottom: 35px;
   transform: scale(.86);
   z-index: 1;
-  animation: drops-height 10s linear infinite;
+  -webkit-animation: drops-height 10s linear infinite;
+          animation: drops-height 10s linear infinite;
 }
 
 .ani2-drops {
@@ -239,22 +251,26 @@
 
 .drops-1 {
   background: url('../img/ani2_drops/drops1.svg') no-repeat;
-  animation: drops1 3s ease-in-out infinite;
+  -webkit-animation: drops1 3s ease-in-out infinite;
+          animation: drops1 3s ease-in-out infinite;
 }
 
 .drops-2 {
   background: url('../img/ani2_drops/drops2.svg') no-repeat;
-  animation: drops2 5s ease-in-out infinite;
+  -webkit-animation: drops2 5s ease-in-out infinite;
+          animation: drops2 5s ease-in-out infinite;
 }
 
 .drops-3 {
   background: url('../img/ani2_drops/drops3.svg') no-repeat;
-  animation: drops3 4s ease-in-out infinite;
+  -webkit-animation: drops3 4s ease-in-out infinite;
+          animation: drops3 4s ease-in-out infinite;
 }
 
 .drops-4 {
   background: url('../img/ani2_drops/drops4.svg') no-repeat;
-  animation: drops4 5s ease-in-out infinite;
+  -webkit-animation: drops4 5s ease-in-out infinite;
+          animation: drops4 5s ease-in-out infinite;
 }
 
 .ani3-system {
@@ -281,7 +297,8 @@
   height: 186px;
   align-self: center;
   position: relative;
-  animation: core-rotate 50s linear infinite;
+  -webkit-animation: core-rotate 50s linear infinite;
+          animation: core-rotate 50s linear infinite;
 }
 
 .ani3-system-2 .core-container {
@@ -326,47 +343,56 @@
 
 .s1-w1 {
   background: url("../img/ani3_water/w1.svg") no-repeat;
-  animation: s1-w1 4s ease-in-out infinite;
+  -webkit-animation: s1-w1 4s ease-in-out infinite;
+          animation: s1-w1 4s ease-in-out infinite;
 }
 
 .s1-w2 {
   background: url("../img/ani3_water/w2.svg") no-repeat;
-  animation: s1-w2 6s ease-in-out infinite;
+  -webkit-animation: s1-w2 6s ease-in-out infinite;
+          animation: s1-w2 6s ease-in-out infinite;
 }
 
 .s1-w3 {
   background: url("../img/ani3_water/w3.svg") no-repeat;
-  animation: s1-w3 5s ease-in-out infinite;
+  -webkit-animation: s1-w3 5s ease-in-out infinite;
+          animation: s1-w3 5s ease-in-out infinite;
 }
 
 .s1-w4 {
   background: url("../img/ani3_water/w4.svg") no-repeat;
-  animation: s1-w4 6s ease-in-out infinite;
+  -webkit-animation: s1-w4 6s ease-in-out infinite;
+          animation: s1-w4 6s ease-in-out infinite;
 }
 
 .s1-w5 {
   background: url("../img/ani3_water/w5.svg") no-repeat;
-  animation: s1-w5 5s ease-in-out infinite;
+  -webkit-animation: s1-w5 5s ease-in-out infinite;
+          animation: s1-w5 5s ease-in-out infinite;
 }
 
 .s2-w6 {
   background: url("../img/ani3_water/w6.svg") no-repeat;
-  animation: s2-w6 6s ease-in-out infinite;
+  -webkit-animation: s2-w6 6s ease-in-out infinite;
+          animation: s2-w6 6s ease-in-out infinite;
 }
 
 .s2-w7 {
   background: url("../img/ani3_water/w7.svg") no-repeat;
-  animation: s1-w2 4s ease-in-out infinite;
+  -webkit-animation: s1-w2 4s ease-in-out infinite;
+          animation: s1-w2 4s ease-in-out infinite;
 }
 
 .s2-w8 {
   background: url("../img/ani3_water/w8.svg") no-repeat;
-  animation: s2-w8 5s ease-in-out infinite;
+  -webkit-animation: s2-w8 5s ease-in-out infinite;
+          animation: s2-w8 5s ease-in-out infinite;
 }
 
 .s2-w9 {
   background: url("../img/ani3_water/w9.svg") no-repeat;
-  animation: s2-w9 6s ease-in-out infinite;
+  -webkit-animation: s2-w9 6s ease-in-out infinite;
+          animation: s2-w9 6s ease-in-out infinite;
 }
 
 .ani3-w-area-container {
@@ -380,7 +406,8 @@
 }
 
 .ani3-system-2 .ani3-w-area-container {
-  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .ani3-w-area-border {
@@ -391,12 +418,15 @@
   position: absolute;
   align-self: center;
   z-index: 2;
-  animation: test_border 10s linear;
-  animation: border-grow 10s linear infinite;
+  -webkit-animation: test_border 10s linear;
+          animation: test_border 10s linear;
+  -webkit-animation: border-grow 10s linear infinite;
+          animation: border-grow 10s linear infinite;
 }
 
 .ani3-system-2 .ani3-w-area-border {
-  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .ani3-w-area {
@@ -481,7 +511,8 @@
   width: 62px;
   height: 12px;
   position: absolute;
-  animation: test-rotate 12s linear infinite;
+  -webkit-animation: test-rotate 12s linear infinite;
+          animation: test-rotate 12s linear infinite;
 }
 
 .test-animation-2 {
@@ -502,6 +533,12 @@
   height: 60px;
   position: absolute;
   animation: test-rotate 9s reverse linear infinite;
+}
+
+
+@-webkit-keyframes test-rotate {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
 }
 
 
@@ -548,7 +585,8 @@
   background: url("../img/ani4_cloud/top.svg") no-repeat;
   background-size: contain;
   position: absolute;
-  animation: cloud-top-rotate 6s ease-in-out infinite;
+  -webkit-animation: cloud-top-rotate 6s ease-in-out infinite;
+          animation: cloud-top-rotate 6s ease-in-out infinite;
 }
 
 .pointer-container .top-p {
@@ -579,7 +617,8 @@
   background-size: contain;
   position: absolute;
   z-index: 2;
-  animation: cloud-top 7s ease-in-out infinite;
+  -webkit-animation: cloud-top 7s ease-in-out infinite;
+          animation: cloud-top 7s ease-in-out infinite;
 }
 
 .ani4-s-border .s-border-2 {
@@ -590,7 +629,8 @@
   background-size: contain;
   position: absolute;
   z-index: 2;
-  animation: cloud-bottom 6s ease-in-out infinite;
+  -webkit-animation: cloud-bottom 6s ease-in-out infinite;
+          animation: cloud-bottom 6s ease-in-out infinite;
 }
 
 .ani4-s-border .s-border-3 {
@@ -601,23 +641,28 @@
   background-size: contain;
   position: absolute;
   z-index: 2;
-  animation: cloud-left 6s ease-in-out infinite;
+  -webkit-animation: cloud-left 6s ease-in-out infinite;
+          animation: cloud-left 6s ease-in-out infinite;
 }
 
 .cloud-top-part, .top-p {
-  animation: cloud-top 7s ease-in-out infinite;
+  -webkit-animation: cloud-top 7s ease-in-out infinite;
+          animation: cloud-top 7s ease-in-out infinite;
 }
 
 .cloud-bottom-part {
-  animation: cloud-bottom 6s ease-in-out infinite;
+  -webkit-animation: cloud-bottom 6s ease-in-out infinite;
+          animation: cloud-bottom 6s ease-in-out infinite;
 }
 
 .cloud-right-part {
-  animation: cloud-right 8s ease-in-out infinite;
+  -webkit-animation: cloud-right 8s ease-in-out infinite;
+          animation: cloud-right 8s ease-in-out infinite;
 }
 
 .cloud-left-part {
-  animation: cloud-left 6s ease-in-out infinite;
+  -webkit-animation: cloud-left 6s ease-in-out infinite;
+          animation: cloud-left 6s ease-in-out infinite;
 }
 
 .cloud-part .right {
@@ -637,7 +682,8 @@
   background-size: contain;
   position: absolute;
   z-index: 2;
-  animation: cloud-right 8s ease-in-out infinite;
+  -webkit-animation: cloud-right 8s ease-in-out infinite;
+          animation: cloud-right 8s ease-in-out infinite;
 }
 
 .cloud-part .bottom {
@@ -657,7 +703,8 @@
   background-size: contain;
   position: absolute;
   z-index: 2;
-  animation: cloud-bottom 6s ease-in-out infinite;
+  -webkit-animation: cloud-bottom 6s ease-in-out infinite;
+          animation: cloud-bottom 6s ease-in-out infinite;
 }
 
 .cloud-part .left {
@@ -677,7 +724,8 @@
   background-size: contain;
   position: absolute;
   z-index: 2;
-  animation: cloud-left 6s ease-in-out infinite;
+  -webkit-animation: cloud-left 6s ease-in-out infinite;
+          animation: cloud-left 6s ease-in-out infinite;
 }
 
 /* cloud parts end */
@@ -685,10 +733,23 @@
 
 /* ani3 */
 
+@-webkit-keyframes w-area-grow {
+  0% {transform: scale(1); opacity: 0;}
+  5% {opacity: 1;}
+  100% {transform: scale(.2);}
+}
+
 @keyframes w-area-grow {
   0% {transform: scale(1); opacity: 0;}
   5% {opacity: 1;}
   100% {transform: scale(.2);}
+}
+
+@-webkit-keyframes border-grow {
+  0% {width: 20px; height: 20px;}
+  90% {width: 186px; height: 186px; opacity: 1;}
+  95% {width: 186px; height: 186px; opacity: 1;}
+  100% {width: 186px; height: 186px; opacity: 0;}
 }
 
 @keyframes border-grow {
@@ -698,6 +759,11 @@
   100% {width: 186px; height: 186px; opacity: 0;}
 }
 
+@-webkit-keyframes core-rotate {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
 @keyframes core-rotate {
   0% {transform: rotate(0deg);}
   100% {transform: rotate(360deg);}
@@ -705,9 +771,27 @@
 
 /* ani2 */
 
+@-webkit-keyframes ani2_red_pulsation {
+  0% {width: 98%; box-shadow: 0 0 5px 1px rgba(255, 0, 0, 1); opacity: .5;}
+  100% {width: 100%; box-shadow: 0 0 15px 8px rgba(255, 0, 0, 1); opacity: .6;}
+}
+
 @keyframes ani2_red_pulsation {
   0% {width: 98%; box-shadow: 0 0 5px 1px rgba(255, 0, 0, 1); opacity: .5;}
   100% {width: 100%; box-shadow: 0 0 15px 8px rgba(255, 0, 0, 1); opacity: .6;}
+}
+
+@-webkit-keyframes cyl-rise {
+  0% {height: 0px;}
+  10% {height: 30px; bottom: 52px;}
+  20% {height: 60px; bottom: 50px;}
+  30% {height: 90px; bottom: 49px;}
+  40% {height: 120px; bottom: 47px;}
+  50% {height: 150px; bottom: 46px;}
+  60% {height: 180px; bottom: 44px;}
+  70% {height: 210px; bottom: 43px;}
+  80% {height: 240px; bottom: 41px;}
+  90%, 100% {height: 270px; bottom: 40px;}
 }
 
 @keyframes cyl-rise {
@@ -721,6 +805,21 @@
   70% {height: 210px; bottom: 43px;}
   80% {height: 240px; bottom: 41px;}
   90%, 100% {height: 270px; bottom: 40px;}
+}
+
+@-webkit-keyframes ani2-arrow-height {
+  0% {height: 0px;}
+  5% {height: 36px;}
+  15% {height: 72px;}
+  25% {height: 108px;}
+  35% {height: 144px;}
+  45% {height: 180px;}
+  55% {height: 216px;}
+  65% {height: 252px;}
+  75% {height: 288px;}
+  85% {height: 324px;}
+  90% {height: 330px;opacity: .8}
+  100% {height: 330px; opacity: 0;}
 }
 
 @keyframes ani2-arrow-height {
@@ -740,9 +839,23 @@
 
 /* ani1 */
 
+@-webkit-keyframes arrow1-down {
+  0% {top: -50vh;}
+  35% {top: -40px;}
+  75% {opacity: .8;}
+  100% {top: -40px; opacity: 0;}
+}
+
 @keyframes arrow1-down {
   0% {top: -50vh;}
   35% {top: -40px;}
+  75% {opacity: .8;}
+  100% {top: -40px; opacity: 0;}
+}
+
+@-webkit-keyframes arrow2-down {
+  0% {top: -50vh;}
+  65% {top: -40px;}
   75% {opacity: .8;}
   100% {top: -40px; opacity: 0;}
 }
@@ -754,11 +867,27 @@
   100% {top: -40px; opacity: 0;}
 }
 
+@-webkit-keyframes arrow3-down {
+  0% {top: -50vh;}
+  85% {top: -40px;}
+  85% {opacity: .8;}
+  100% {top: -40px; opacity: 0;}
+}
+
 @keyframes arrow3-down {
   0% {top: -50vh;}
   85% {top: -40px;}
   85% {opacity: .8;}
   100% {top: -40px; opacity: 0;}
+}
+
+
+@-webkit-keyframes red-area-resize {
+  0% {width: 0;}
+  35% {width: calc(192px * .98);}
+  65% {width: calc(383px * .98);}
+  85% {width: calc(518px * .98);}
+  99%, 100% {width: 550px;}
 }
 
 
@@ -768,6 +897,17 @@
   65% {width: calc(383px * .98);}
   85% {width: calc(518px * .98);}
   99%, 100% {width: 550px;}
+}
+
+@-webkit-keyframes opacity-pulsing {
+  8% {box-shadow: 0 0 5px 3px rgba(255, 0, 0, 1); opacity: .9;}
+  30%, 34% {box-shadow: 0 0 5px 3px rgba(255, 0, 0, 1); opacity: .5;}
+  35%, 36% {box-shadow: 0 0 6px 8px rgba(255, 0, 0, 1); opacity: .6;}
+  52%, 64% {box-shadow: 0 0 5px 3px rgba(255, 0, 0, 1); opacity: .4;}
+  65%, 66% {box-shadow: 0 0 6px 8px rgba(255, 0, 0, 1); opacity: .6;}
+  75%, 84% {box-shadow: 0 0 5px 3px rgba(255, 0, 0, 1); opacity: .4;}
+  85%, 86% {box-shadow: 0 0 6px 8px rgba(255, 0, 0, 1); opacity: .6;}
+  100% {box-shadow: 0 0 5px 3px rgba(255, 0, 0, 1); opacity: .0;}
 }
 
 @keyframes opacity-pulsing {
@@ -781,15 +921,33 @@
   100% {box-shadow: 0 0 5px 3px rgba(255, 0, 0, 1); opacity: .0;}
 }
 
+@-webkit-keyframes s-stroke {
+  0% {background-position: -500px top;}
+  33%, 100% {background-position: 0 top;}
+}
+
 @keyframes s-stroke {
   0% {background-position: -500px top;}
   33%, 100% {background-position: 0 top;}
+}
+
+@-webkit-keyframes m-stroke {
+  0% {background-position: -2500px top;}
+  33% {background-position: -2000px top;}
+  66%, 100% {background-position: -1500px top;}
 }
 
 @keyframes m-stroke {
   0% {background-position: -2500px top;}
   33% {background-position: -2000px top;}
   66%, 100% {background-position: -1500px top;}
+}
+
+@-webkit-keyframes l-stroke {
+  0% {background-position: -3000px top;}
+  33% {background-position: -4000px top;}
+  66% {background-position: -3500px top;}
+  100% {background-position: -3000px top;}
 }
 
 @keyframes l-stroke {
@@ -799,6 +957,13 @@
   100% {background-position: -3000px top;}
 }
 
+@-webkit-keyframes drops-height {
+  0% {height: 0px;}
+  90% {height: 293px;}
+  95% {opacity: .8;}
+  100% {height: 293px; opacity: 0;}
+}
+
 @keyframes drops-height {
   0% {height: 0px;}
   90% {height: 293px;}
@@ -806,9 +971,21 @@
   100% {height: 293px; opacity: 0;}
 }
 
+@-webkit-keyframes drops1 {
+  0% {transform: translate(0);}
+  50% {transform: translate(16px, -12px);}
+  100% {transform: translate(0);}
+}
+
 @keyframes drops1 {
   0% {transform: translate(0);}
   50% {transform: translate(16px, -12px);}
+  100% {transform: translate(0);}
+}
+
+@-webkit-keyframes drops2 {
+  0% {transform: translate(0);}
+  50% {transform: translate(-24px, -6px);}
   100% {transform: translate(0);}
 }
 
@@ -818,9 +995,21 @@
   100% {transform: translate(0);}
 }
 
+@-webkit-keyframes drops3 {
+  0% {transform: translate(0);}
+  50% {transform: translate(23px, 12px);}
+  100% {transform: translate(0);}
+}
+
 @keyframes drops3 {
   0% {transform: translate(0);}
   50% {transform: translate(23px, 12px);}
+  100% {transform: translate(0);}
+}
+
+@-webkit-keyframes drops4 {
+  0% {transform: translate(0);}
+  50% {transform: translate(-20px, 10px);}
   100% {transform: translate(0);}
 }
 
@@ -830,9 +1019,21 @@
   100% {transform: translate(0);}
 }
 
+@-webkit-keyframes s1-w1 {
+  0% {transform: translate(0);}
+  50% {transform: translate(-15px, 20px);}
+  100% {transform: translate(0);}
+}
+
 @keyframes s1-w1 {
   0% {transform: translate(0);}
   50% {transform: translate(-15px, 20px);}
+  100% {transform: translate(0);}
+}
+
+@-webkit-keyframes s1-w2 {
+  0% {transform: translate(0);}
+  50% {transform: translate(25px, -10px);}
   100% {transform: translate(0);}
 }
 
@@ -842,9 +1043,21 @@
   100% {transform: translate(0);}
 }
 
+@-webkit-keyframes s1-w3 {
+  0% {transform: translate(0);}
+  50% {transform: translate(-15px, -20px);}
+  100% {transform: translate(0);}
+}
+
 @keyframes s1-w3 {
   0% {transform: translate(0);}
   50% {transform: translate(-15px, -20px);}
+  100% {transform: translate(0);}
+}
+
+@-webkit-keyframes s1-w4 {
+  0% {transform: translate(0);}
+  50% {transform: translate(30px, 20px);}
   100% {transform: translate(0);}
 }
 
@@ -854,9 +1067,21 @@
   100% {transform: translate(0);}
 }
 
+@-webkit-keyframes s1-w5 {
+  0% {transform: translate(0);}
+  50% {transform: translate(-25px, 10px);}
+  100% {transform: translate(0);}
+}
+
 @keyframes s1-w5 {
   0% {transform: translate(0);}
   50% {transform: translate(-25px, 10px);}
+  100% {transform: translate(0);}
+}
+
+@-webkit-keyframes s2-w8 {
+  0% {transform: translate(0);}
+  50% {transform: translate(12px, 25px);}
   100% {transform: translate(0);}
 }
 
@@ -866,10 +1091,22 @@
   100% {transform: translate(0);}
 }
 
+@-webkit-keyframes s2-w6 {
+  0% {transform: translate(5px);}
+  50% {transform: translate(-8px, -35px);}
+  100% {transform: translate(5px);}
+}
+
 @keyframes s2-w6 {
   0% {transform: translate(5px);}
   50% {transform: translate(-8px, -35px);}
   100% {transform: translate(5px);}
+}
+
+@-webkit-keyframes s2-w9 {
+  0% {transform: translate(15px);}
+  50% {transform: translate(-20px, -8px);}
+  100% {transform: translate(15px);}
 }
 
 @keyframes s2-w9 {
@@ -878,9 +1115,21 @@
   100% {transform: translate(15px);}
 }
 
+@-webkit-keyframes cloud-top {
+  0% {transform: translate(0);}
+  50% {transform: translate(10px, -12px);}
+  100% {transform: translate(0);}
+}
+
 @keyframes cloud-top {
   0% {transform: translate(0);}
   50% {transform: translate(10px, -12px);}
+  100% {transform: translate(0);}
+}
+
+@-webkit-keyframes cloud-bottom {
+  0% {transform: translate(0);}
+  60% {transform: translate(-3px, 7px);}
   100% {transform: translate(0);}
 }
 
@@ -890,10 +1139,22 @@
   100% {transform: translate(0);}
 }
 
+@-webkit-keyframes cloud-right {
+  0% {transform: translate(-3px);}
+  50% {transform: translate(6px, 7px);}
+  100% {transform: translate(-3px);}
+}
+
 @keyframes cloud-right {
   0% {transform: translate(-3px);}
   50% {transform: translate(6px, 7px);}
   100% {transform: translate(-3px);}
+}
+
+@-webkit-keyframes cloud-left {
+  0% {transform: translate(0);}
+  50% {transform: translate(-10px, -5px);}
+  100% {transform: translate(0);}
 }
 
 @keyframes cloud-left {
@@ -902,7 +1163,19 @@
   100% {transform: translate(0);}
 }
 
+@-webkit-keyframes cloud-top-rotate {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(3deg);}
+  100% {transform: translate(0);}
+}
+
 @keyframes cloud-top-rotate {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(3deg);}
+  100% {transform: translate(0);}
+}
+
+@-webkit-keyframes cloud-bottom-rotate {
   0% {transform: rotate(0deg);}
   50% {transform: rotate(3deg);}
   100% {transform: translate(0);}
