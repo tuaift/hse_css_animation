@@ -2,8 +2,16 @@
   box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@font-face {
+  font-family: 'Fira Code';
+  src: url('../fonts/FiraCode-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.ttf');
+}
+
 
 body, ul {
   margin: 0;
@@ -11,152 +19,142 @@ body, ul {
   font-family: 'Fira Code'
 }
 
+.canvas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .field {
-  /* display: flex; */
+  display: flex;
   width: 50vw;
   height: 50vh;
-  float: left;
-  background: url("img/field.png") no-repeat;
+  background: url("../img/field.png") no-repeat;
   background-size: cover;
   background-position: bottom;
   border-right: 2px solid black;
   border-bottom: 2px solid black;
-  /* overflow: hidden; */
-  position: relative;
+  overflow: hidden;
 }
 
 .field:nth-child(2n) {
   border-right: none;
 }
 
-.ruler-right {
-  content: '';
-  display: none;
-  position: absolute;
-  z-index: 1;
-  margin-top: 2px;
-  left: calc(100% + 2px);
+.static {
+  z-index: 2;
+  width: inherit;
+  position: relative;
 }
 
-.ruler-left {
-  content: '';
-  display: none;
+.animation {
   position: absolute;
-  z-index: 1;
-  margin-top: 2px;
-  right: calc(100% + 2px);
+  align-self: flex-start;
 }
 
-.ruler-bottom {
-  content: '';
-  display: none;
-  position: absolute;
-  z-index: 1;
-  top: calc(100% + 2px);
-  left: 96px;
-}
-
-/* .ruler-bottom-right {
-  content: '';
-  display: none;
-  position: absolute;
-  z-index: 1;
-  top: calc(100% + 2px);
-  left: 96px;
-} */
-
-.ruler-top {
-  content: '';
-  display: none;
-  position: absolute;
-  z-index: 1;
-  bottom: calc(100% - 4px);
-  left: 95px;
-}
-
-.ruler-top-right {
-  content: '';
-  display: none;
-  position: absolute;
-  z-index: 1;
-  bottom: calc(100% - 4px);
-  right: 100px;
-}
-
-.info:hover ~ .description,
-.info:hover ~ .ruler-right,
-.info:hover ~ .ruler-left,
-.info:hover ~ .ruler-bottom,
-.info:hover ~ .ruler-bottom-right,
-.info:hover ~ .ruler-top,
-.info:hover ~ .ruler-top-right {
+.info:hover ~ .description {
   display: block;
 }
 
-/* .right-side-elem {
-  display: block;
-  float: right;
-  margin: 0 0 20px 20px;
-}*/
+.info:hover ~ .title {
+  display: inline-block;
+}
+
+.info:hover ~ .ruler-container-v,
+.info:hover ~ .ruler-container-h {
+  display: flex;
+}
 
 .label {
   display: inline-block;
   font-family: 'Roboto';
   position: relative;
-  font-size: 20px;
-  /* font-size: 30px; */
-  margin: 19px 20px;
+  font-size: calc(11px + 0.6vw);
+  margin: 2vh 0 0 1.2vw;
+}
+
+.title {
+  position: relative;
+  display: none;
+}
+
+.title p {
+  font-size: calc(10px + 0.3vw);
+  margin-left: 0.5vw;
 }
 
 .info {
   display: block;
   position: absolute;
-  /* margin: 22px 20px; */
-  right: 20px;
-  top: 21px;
-  /* font-size: 28px; */
-  /* float: right; */
+  min-width: 3%;
+  height: auto;
+  right: calc(1.2vw + 1px);
+  top: calc(2vh + 1px);
 }
 
 .description {
   position: absolute;
   max-width: 220px;
-  right: 19px;
+  right: 1.2vw;
+  top: 6.7vh;
   display: none;
-  /* margin: 20px; */
-  /* float: right; */
-
 }
 
 .description p {
-  font-size: 11px;
-  line-height: 13px;
+  font-size: calc(6px + 0.3vw);
+  line-height: 14px;
   margin-block-start: 0px;
   margin-block-end: 0px;
 }
 
-/* .animation {
-  display: flex;
-  justify-content: center;
-  width: 50vw;
-  height: 50vh;
-  background: rgba(255, 0, 0, 0.5);
+/* Rulers style */
+
+.ruler-svg img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ruler-container-v {
+  display: none;
   position: absolute;
-  z-index: 0;
+  width: 7%;
+  height: 50vh;
+  top: 0;
+  align-items: center;
 }
 
-.container {
-  display: block;
-  width: 35vw;
-  height: 5vh;
+.ruler-container-v-right {
+  left: 100%;
 }
 
-.circle {
-  display: block;
-  width: 35vw;
-  height: 5vh;
-  background: yellow;
-  border: 1px solid black;
-  border-radius: 50%;
-  transform: perspective(1000px);
-} */
+.ruler-container-v-left {
+  left: -5.3%;
+}
+
+.ruler-wrapper-v {
+  width: 75%;
+  height: auto;
+}
+
+.ruler-container-h {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  width: 50vw;
+  height: 7%;
+  align-items: center;
+}
+
+.ruler-container-h-bottom {
+  top: 100%;
+}
+
+.ruler-container-h-top {
+  bottom: calc(100% + 2px);
+}
+
+.ruler-wrapper-h {
+  width: 75%;
+  height: auto;
+}

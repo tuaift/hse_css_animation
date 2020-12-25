@@ -19,7 +19,6 @@
   align-self: flex-start;
   justify-content: space-between;
   width: calc(376px * 0.98);
-  /* height: 491px; */
   height: 50vh;
   z-index: 1;
 }
@@ -134,8 +133,8 @@
 
 .ellipse-s {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 500px;
+  height: 44px;
   background: url('../img/ellipses.svg') no-repeat;
   background-position: -500px top;
   position: absolute;
@@ -145,8 +144,8 @@
 
 .ellipse-m {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 500px;
+  height: 44px;
   background: url('../img/ellipses.svg') no-repeat;
   background-position: -1500px top;
   position: absolute;
@@ -156,33 +155,14 @@
 
 .ellipse-l {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 500px;
+  height: 44px;
   background-image: url('../img/ellipses.svg');
   background-size: auto 100%;
   transform: scale(.98);
   background-position: -3000px top;
   position: absolute;
   animation: l-stroke 10s steps(1) infinite;
-}
-
-@media all and (max-width: 1024px) and (orientation: portrait) {
-  .ani1 {width: 100vw; height: 50vh;}
-  .ani-wrapper {width: 100vw; height: 50vh;}
-  .ani1-ellipses-container {width: 100vw;}
-  .ellipse-l, .ellipse-m, .ellipse-s {transform: scale(.95);}
-}
-
-@media all and (max-width: 1024px) and (orientation: landscape) {
-  .ellipse-l, .ellipse-m, .ellipse-s {transform: scale(.85); background-size: auto 100%;}
-  .ani1-arrows {width: calc(376px * 0.85);}
-}
-
-@media all and (max-width: 375px) and (orientation: portrait) {
-  .ani1 {width: 100vw; height: calc(100vh - 120px);}
-  .ani-wrapper {width: 100vw; height: calc(100vh - 120px);}
-  /* .ani1-ellipses-container {width: 100vw; bottom: 20px;} */
-  /* .ellipse-l, .ellipse-m, .ellipse-s {background-size: auto 100%; transform: scale(.65);} */
 }
 
 .ani1-red-ellipse-wrapper {
@@ -236,23 +216,63 @@
   animation: ani2_red_pulsation 2s alternate linear infinite;
 }
 
+.ani2-drops-container {
+  display: flex;
+  width: 312px;
+  height: 293px;
+  position: absolute;
+  align-self: center;
+  bottom: 35px;
+  transform: scale(.86);
+  z-index: 1;
+  animation: drops-height 10s linear infinite;
+}
+
+.ani2-drops {
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-position: top;
+  position: absolute;
+}
+
+.drops-1 {
+  background: url('../img/ani2_drops/drops1.svg') no-repeat;
+  animation: drops1 3s ease-in-out infinite;
+}
+
+.drops-2 {
+  background: url('../img/ani2_drops/drops2.svg') no-repeat;
+  animation: drops2 5s ease-in-out infinite;
+}
+
+.drops-3 {
+  background: url('../img/ani2_drops/drops3.svg') no-repeat;
+  animation: drops3 4s ease-in-out infinite;
+}
+
+.drops-4 {
+  background: url('../img/ani2_drops/drops4.svg') no-repeat;
+  animation: drops4 5s ease-in-out infinite;
+}
+
 .ani3-system {
   display: flex;
   justify-content: center;
   position: absolute;
-  width: 300px;
-  height: 300px;
-  /* background: red; */
+  width: 360px;
+  height: 360px;
 }
 
 .ani3-system-1 {
-  right: 10%;
-  bottom: 10%;
+  right: calc(10px + 0.6vw);
+  bottom: 20px;
 }
 
 .ani3-system-2 {
-  left: 10%;
-  top: 10%;
+  left: 50px;
+  top: 20px;
 }
 
 .core-container {
@@ -283,6 +303,70 @@
   background: url("../img/ani3_point.svg") no-repeat;
   background-size: contain;
   position: absolute;
+  align-self: center;
+}
+
+.water-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 340px;
+  height: 300px;
+  align-self: center;
+}
+
+.s1-water {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  align-self: center;
+  background-size: contain;
+}
+
+.s1-w1 {
+  background: url("../img/ani3_water/w1.svg") no-repeat;
+  animation: s1-w1 4s ease-in-out infinite;
+}
+
+.s1-w2 {
+  background: url("../img/ani3_water/w2.svg") no-repeat;
+  animation: s1-w2 6s ease-in-out infinite;
+}
+
+.s1-w3 {
+  background: url("../img/ani3_water/w3.svg") no-repeat;
+  animation: s1-w3 5s ease-in-out infinite;
+}
+
+.s1-w4 {
+  background: url("../img/ani3_water/w4.svg") no-repeat;
+  animation: s1-w4 6s ease-in-out infinite;
+}
+
+.s1-w5 {
+  background: url("../img/ani3_water/w5.svg") no-repeat;
+  animation: s1-w5 5s ease-in-out infinite;
+}
+
+.s2-w6 {
+  background: url("../img/ani3_water/w6.svg") no-repeat;
+  animation: s2-w6 6s ease-in-out infinite;
+}
+
+.s2-w7 {
+  background: url("../img/ani3_water/w7.svg") no-repeat;
+  animation: s1-w2 4s ease-in-out infinite;
+}
+
+.s2-w8 {
+  background: url("../img/ani3_water/w8.svg") no-repeat;
+  animation: s2-w8 5s ease-in-out infinite;
+}
+
+.s2-w9 {
+  background: url("../img/ani3_water/w9.svg") no-repeat;
+  animation: s2-w9 6s ease-in-out infinite;
 }
 
 .ani3-w-area-container {
@@ -292,7 +376,6 @@
   width: 186px;
   height: 186px;
   align-self: center;
-  /* border: 1px solid black; */
   animation: w-area-grow 10s reverse linear infinite;
 }
 
@@ -375,6 +458,68 @@
   transform: scale(1.4);
 }
 
+.ani4-single-container {
+  display: flex;
+  position: absolute;
+  width: 378px;
+  height: 336px;
+  align-self: center;
+}
+
+.ani4-single-animation {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 41px;
+  height: 41px;
+}
+
+.test-animation-1 {
+  display: block;
+  top: 36%;
+  left: 22%;
+  width: 62px;
+  height: 12px;
+  position: absolute;
+  animation: test-rotate 12s linear infinite;
+}
+
+.test-animation-2 {
+  display: block;
+  top: 62%;
+  left: 50%;
+  width: 62px;
+  height: 16px;
+  position: absolute;
+  animation: test-rotate 7s reverse linear infinite;
+}
+
+.test-animation-3 {
+  display: block;
+  top: 33%;
+  left: 54%;
+  width: 90px;
+  height: 60px;
+  position: absolute;
+  animation: test-rotate 9s reverse linear infinite;
+}
+
+
+@keyframes test-rotate {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+.ani4-s {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../img/ani4_cloud/ani4_single.svg") no-repeat;
+  background-size: contain;
+  align-self: center;
+  position: absolute;
+}
+
 /* cloud parts start */
 
 .cloud-part {
@@ -384,7 +529,6 @@
   width: 217px;
   height: 154px;
   align-self: center;
-  /* animation: cloud-top 7s linear; */
 }
 
 .pointer-container {
@@ -395,7 +539,6 @@
   height: 154px;
   align-self: center;
   z-index: 3;
-  /* animation: cloud-top 7s linear; */
 }
 
 .cloud-part .top {
@@ -418,6 +561,49 @@
   z-index: 2;
 }
 
+.ani4-s-border {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 221px;
+  height: 154px;
+  align-self: center;
+  z-index: 3;
+}
+
+.ani4-s-border .s-border-1 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../img/ani4_cloud/b1.svg") no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: 2;
+  animation: cloud-top 7s ease-in-out infinite;
+}
+
+.ani4-s-border .s-border-2 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../img/ani4_cloud/b2.svg") no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: 2;
+  animation: cloud-bottom 6s ease-in-out infinite;
+}
+
+.ani4-s-border .s-border-3 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../img/ani4_cloud/b3.svg") no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: 2;
+  animation: cloud-left 6s ease-in-out infinite;
+}
+
 .cloud-top-part, .top-p {
   animation: cloud-top 7s ease-in-out infinite;
 }
@@ -432,50 +618,6 @@
 
 .cloud-left-part {
   animation: cloud-left 6s ease-in-out infinite;
-}
-
-@keyframes cloud-top {
-  0% {transform: translate(0);}
-  50% {transform: translate(10px, -12px);}
-  /* 80% {transform: translate(-2px, 2px);} */
-  100% {transform: translate(0);}
-}
-
-@keyframes cloud-bottom {
-  0% {transform: translate(0);}
-  60% {transform: translate(-3px, 7px);}
-  /* 80% {transform: translate(-2px, 2px);} */
-  100% {transform: translate(0);}
-}
-
-@keyframes cloud-right {
-  0% {transform: translate(-3px);}
-  50% {transform: translate(6px, 7px);}
-  /* 60% {transform: translate(-2px, -1px);} */
-  /* 80% {transform: translate(-2px, 2px);} */
-  100% {transform: translate(-3px);}
-}
-
-@keyframes cloud-left {
-  0% {transform: translate(0);}
-  50% {transform: translate(-10px, -5px);}
-  /* 60% {transform: translate(-2px, -1px);} */
-  /* 80% {transform: translate(-2px, 2px);} */
-  100% {transform: translate(0);}
-}
-
-@keyframes cloud-top-rotate {
-  0% {transform: rotate(0deg);}
-  50% {transform: rotate(3deg);}
-  /* 80% {transform: translate(-2px, 2px);} */
-  100% {transform: translate(0);}
-}
-
-@keyframes cloud-bottom-rotate {
-  0% {transform: rotate(0deg);}
-  50% {transform: rotate(3deg);}
-  /* 80% {transform: translate(-2px, 2px);} */
-  100% {transform: translate(0);}
 }
 
 .cloud-part .right {
@@ -544,10 +686,6 @@
 /* ani3 */
 
 @keyframes w-area-grow {
-  /* 0% {width: 20px; height: 20px;}
-  95% {width: 186px; height: 186px; opacity: 1;}
-  100% {width: 186px; height: 186px; opacity: 0;} */
-
   0% {transform: scale(1); opacity: 0;}
   5% {opacity: 1;}
   100% {transform: scale(.2);}
@@ -596,7 +734,8 @@
   65% {height: 252px;}
   75% {height: 288px;}
   85% {height: 324px;}
-  90%, 100% {height: 330px;}
+  90% {height: 330px;opacity: .8}
+  100% {height: 330px; opacity: 0;}
 }
 
 /* ani1 */
@@ -658,4 +797,119 @@
   33% {background-position: -4000px top;}
   66% {background-position: -3500px top;}
   100% {background-position: -3000px top;}
+}
+
+@keyframes drops-height {
+  0% {height: 0px;}
+  90% {height: 293px;}
+  95% {opacity: .8;}
+  100% {height: 293px; opacity: 0;}
+}
+
+@keyframes drops1 {
+  0% {transform: translate(0);}
+  50% {transform: translate(16px, -12px);}
+  100% {transform: translate(0);}
+}
+
+@keyframes drops2 {
+  0% {transform: translate(0);}
+  50% {transform: translate(-24px, -6px);}
+  100% {transform: translate(0);}
+}
+
+@keyframes drops3 {
+  0% {transform: translate(0);}
+  50% {transform: translate(23px, 12px);}
+  100% {transform: translate(0);}
+}
+
+@keyframes drops4 {
+  0% {transform: translate(0);}
+  50% {transform: translate(-20px, 10px);}
+  100% {transform: translate(0);}
+}
+
+@keyframes s1-w1 {
+  0% {transform: translate(0);}
+  50% {transform: translate(-15px, 20px);}
+  100% {transform: translate(0);}
+}
+
+@keyframes s1-w2 {
+  0% {transform: translate(0);}
+  50% {transform: translate(25px, -10px);}
+  100% {transform: translate(0);}
+}
+
+@keyframes s1-w3 {
+  0% {transform: translate(0);}
+  50% {transform: translate(-15px, -20px);}
+  100% {transform: translate(0);}
+}
+
+@keyframes s1-w4 {
+  0% {transform: translate(0);}
+  50% {transform: translate(30px, 20px);}
+  100% {transform: translate(0);}
+}
+
+@keyframes s1-w5 {
+  0% {transform: translate(0);}
+  50% {transform: translate(-25px, 10px);}
+  100% {transform: translate(0);}
+}
+
+@keyframes s2-w8 {
+  0% {transform: translate(0);}
+  50% {transform: translate(12px, 25px);}
+  100% {transform: translate(0);}
+}
+
+@keyframes s2-w6 {
+  0% {transform: translate(5px);}
+  50% {transform: translate(-8px, -35px);}
+  100% {transform: translate(5px);}
+}
+
+@keyframes s2-w9 {
+  0% {transform: translate(15px);}
+  50% {transform: translate(-20px, -8px);}
+  100% {transform: translate(15px);}
+}
+
+@keyframes cloud-top {
+  0% {transform: translate(0);}
+  50% {transform: translate(10px, -12px);}
+  100% {transform: translate(0);}
+}
+
+@keyframes cloud-bottom {
+  0% {transform: translate(0);}
+  60% {transform: translate(-3px, 7px);}
+  100% {transform: translate(0);}
+}
+
+@keyframes cloud-right {
+  0% {transform: translate(-3px);}
+  50% {transform: translate(6px, 7px);}
+  100% {transform: translate(-3px);}
+}
+
+@keyframes cloud-left {
+  0% {transform: translate(0);}
+  50% {transform: translate(-10px, -5px);}
+  100% {transform: translate(0);}
+}
+
+@keyframes cloud-top-rotate {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(3deg);}
+  100% {transform: translate(0);}
+}
+
+@keyframes cloud-bottom-rotate {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(3deg);}
+  100% {transform: translate(0);}
 }

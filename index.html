@@ -4,209 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cumulus lab project</title>
-    <link rel="stylesheet" href="css/animation_style.css">
-    <link rel="stylesheet" href="css/responsive_layout.css">
-    <style media="screen">
-      * {
-        box-sizing: border-box;
-      }
-
-      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
-
-      body, ul {
-				margin: 0;
-				padding: 0;
-        font-family: 'Fira Code'
-      }
-
-      .canvas {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-
-      .field {
-        display: flex;
-        width: 50vw;
-        height: 50vh;
-        /* float: left; */
-        background: url("img/field.png") no-repeat;
-        background-size: cover;
-        background-position: bottom;
-        border-right: 2px solid black;
-        border-bottom: 2px solid black;
-        /* overflow: hidden; */
-      }
-
-      .field:nth-child(2n) {
-        border-right: none;
-      }
-
-      .static {
-        z-index: 2;
-        width: inherit;
-        position: relative;
-      }
-
-      .animation {
-        position: absolute;
-        align-self: flex-start;
-      }
-
-      .info:hover ~ .description {
-        display: block;
-      }
-
-      .info:hover ~ .title {
-        display: inline-block;
-      }
-
-      .info:hover ~ .ruler-container-v,
-      .info:hover ~ .ruler-container-h {
-        display: flex;
-      }
-
-      /* .right-side-elem {
-        display: block;
-        float: right;
-        margin: 0 0 20px 20px;
-      }*/
-
-      .label {
-        display: inline-block;
-        font-family: 'Roboto';
-        position: relative;
-        font-size: calc(11px + 0.6vw);
-        /* font-size: 30px; */
-        margin: 2vh 0 0 1.2vw;
-      }
-
-      .title {
-        position: relative;
-        display: none;
-      }
-
-      .title p {
-        font-size: calc(10px + 0.3vw);
-        margin-left: 0.5vw;
-      }
-
-      .info {
-        display: block;
-        position: absolute;
-        min-width: 3%;
-        height: auto;
-        right: calc(1.2vw + 1px);
-        top: calc(2vh + 1px);
-      }
-
-      .description {
-        position: absolute;
-        max-width: 220px;
-        right: 1.2vw;
-        top: 6.7vh;
-        display: none;
-      }
-
-      .description p {
-        font-size: calc(6px + 0.3vw);
-        line-height: 14px;
-        margin-block-start: 0px;
-        margin-block-end: 0px;
-      }
-
-      /* Rulers style */
-
-      .ruler-svg img {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-
-      .ruler-container-v {
-        display: none;
-        position: absolute;
-        /* width: 46px; */
-        width: 7%;
-        height: 50vh;
-        top: 0;
-        align-items: center;
-      }
-
-      .ruler-container-v-right {
-        left: 100%;
-      }
-
-      .ruler-container-v-left {
-        left: -5.3%;
-      }
-
-      .ruler-wrapper-v {
-        width: 75%;
-        height: auto;
-      }
-
-      .ruler-container-h {
-        display: none;
-        position: absolute;
-        flex-direction: column;
-        width: 50vw;
-        height: 7%;
-        align-items: center;
-      }
-
-      .ruler-container-h-bottom {
-        top: 100%;
-      }
-
-      .ruler-container-h-top {
-        bottom: calc(100% + 2px);
-      }
-
-      .ruler-wrapper-h {
-        width: 75%;
-        height: auto;
-      }
-
-      @media all and (max-width: 1024px) {
-        .info {display: none;}
-        .description {display: block; top: 2vh; max-width: 180px;}
-        .description p {line-height: 11px;}
-        .title {display: inline-block; margin-left: 0;}
-        .title p {font-size: 12px;}
-        .label {margin-top: 1.4vh;}
-      }
-
-      @media all and (max-width: 1024px) and (orientation: portrait) {
-        .canvas {flex-direction: column;}
-        .field {width: 100vw; height: 50vh;}
-        .animation {width: 100vw;}
-        .title p {font-size: 12px;}
-        .description {max-width: 210px; top: 1.6vh;}
-        .description p {font-size: 10px; line-height: 13px}
-      }
-
-      @media all and (max-width: 375px) and (orientation: portrait) {
-        .field {width: 100vw; height: calc(100vh - 120px);}
-        .label {font-size: 20px; margin-left: 3.5vw;}
-        .title p {font-size: 16px;}
-        .description {left: 4vw;  margin-top: 40px; max-width: 240px;}
-        .description p {font-size: 12px; line-height: 15px;}
-        /* .animation {height: 100vh;} */
-      }
-
-      /* @media only screen and (max-width: 375px;) and (orientation: portrait) {
-        .canvas {flex-direction: column;}
-        .field {width: 100vw; height: 100vh;}
-        .animation {height: 100vh;}
-        .label {font-size: 18px; margin-left: 3vw;}
-        .description {left: 3.5vw; top: 7vh;}
-        .description p {font-size: 9px;}
-      } */
-
-
-    </style>
+    <link rel="stylesheet" href="css/ani_style.css">
+    <!-- <link rel="stylesheet" href="css/responsive_layout.css"> -->
   </head>
   <body>
     <section class="canvas">
@@ -235,8 +34,8 @@
             </div>
           </div>
         </div>
-        <div class="animation ani1">
-          <div class="ani-wrapper">
+        <div class="animation">
+          <div class="ani-wrapper ani1">
             <div class="ani1-arrows">
               <span class="red-arrow ani1-arrow3"></span>
               <span class="red-arrow ani1-arrow2"></span>
@@ -282,8 +81,14 @@
             </div>
           </div>
         </div>
-        <div class="animation ani2">
-          <div class="ani-wrapper">
+        <div class="animation">
+          <div class="ani-wrapper ani2">
+            <div class="ani2-drops-container">
+              <div class="ani2-drops drops-1"></div>
+              <div class="ani2-drops drops-2"></div>
+              <div class="ani2-drops drops-3"></div>
+              <div class="ani2-drops drops-4"></div>
+            </div>
             <div class="ani2-arrows">
               <span class="ani2-arrow"></span>
               <span class="ani2-arrow"></span>
@@ -329,9 +134,16 @@
 
         <!-- ani3 start -->
 
-        <div class="animation ani3">
-          <div class="ani-wrapper">
+        <div class="animation">
+          <div class="ani-wrapper ani3">
             <div class="ani3-system ani3-system-1">
+              <div class="water-container">
+                <div class="s1-water s1-w1"></div>
+                <div class="s1-water s1-w2"></div>
+                <div class="s1-water s1-w3"></div>
+                <div class="s1-water s1-w4"></div>
+                <div class="s1-water s1-w5"></div>
+              </div>
               <div class="ani3-w-area-container">
                 <div class="ani3-w-area"></div>
               </div>
@@ -342,6 +154,12 @@
               <div class="point"></div>
             </div>
             <div class="ani3-system ani3-system-2">
+              <div class="water-container">
+                <div class="s1-water s2-w6"></div>
+                <div class="s1-water s2-w7"></div>
+                <div class="s1-water s2-w8"></div>
+                <div class="s1-water s2-w9"></div>
+              </div>
               <div class="ani3-w-area-container">
                 <div class="ani3-w-area"></div>
               </div>
@@ -385,20 +203,39 @@
 
         <!-- ani4 start -->
 
-        <div class="animation ani4">
-          <div class="ani-wrapper">
+        <div class="animation">
+          <div class="ani-wrapper ani4">
             <div class="ani4-system">
 
               <!-- cloud -->
 
               <div class="ani4-cloud-container">
                 <div class="cloud-main-animation">
-                  
+                  <div class="ani4-single-container">
+                    <div class="test-animation-1">
+                      <div class="ani4-single-animation a-s1">
+                        <div class="ani4-s"></div>
+                      </div>
+                    </div>
+                    <div class="test-animation-2">
+                      <div class="ani4-single-animation a-s2">
+                        <div class="ani4-s"></div>
+                      </div>
+                    </div>
+                    <div class="test-animation-3">
+                      <div class="ani4-single-animation a-s3">
+                        <div class="ani4-s"></div>
+                      </div>
+                    </div>
+                  </div>
                   <div class="cloud-part cloud-top-part">
                     <div class="top"></div>
                   </div>
                   <div class="pointer-container">
                     <div class="top-p"></div>
+                  </div>
+                  <div class="ani4-s-border">
+                    <div class="s-border-1"></div>
                   </div>
                   <div class="cloud-part cloud-right-part">
                     <div class="right"></div>
@@ -406,11 +243,17 @@
                   <div class="pointer-container">
                     <div class="right-p"></div>
                   </div>
+                  <div class="ani4-s-border">
+                    <div class="s-border-2"></div>
+                  </div>
                   <div class="cloud-part cloud-bottom-part">
                     <div class="bottom"></div>
                   </div>
                   <div class="pointer-container">
                     <div class="bottom-p"></div>
+                  </div>
+                  <div class="ani4-s-border">
+                    <div class="s-border-3"></div>
                   </div>
                   <div class="cloud-part cloud-left-part">
                     <div class="left"></div>
